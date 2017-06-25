@@ -38,6 +38,14 @@
 
 - `git merge <name>`：合并某分支到当前分支。
 
+- `git remote add origin git@server-name:path/repo-name.git`：关联一个远程库。
+
+- `git push -u origin master`：第一次推送master分支的所有内容。
+
+- `git push origin master`：推送最新修改。
+
+- `git clone`：克隆一个远程仓库。
+
 - `git checkout -b branch-name origin/branch-name`：在本地创建和远程分支对应的分支，本地和远程分支的名称最好一致。
 
 - `git branch --set-upstream branch-name origin/branch-name`：建立本地分支和远程分支的关联。
