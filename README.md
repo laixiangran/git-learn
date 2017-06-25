@@ -38,6 +38,10 @@
 
 - `git merge <name>`：合并某分支到当前分支。
 
+- `git checkout -b branch-name origin/branch-name`：在本地创建和远程分支对应的分支，本地和远程分支的名称最好一致。
+
+- `git branch --set-upstream branch-name origin/branch-name`：建立本地分支和远程分支的关联。
+
 - `git tag`：查看所有标签。
 
 - `git tag <name>`：新建标签，默认为HEAD，也可以指定一个commit id。
@@ -65,3 +69,13 @@
 所以，团队合作的分支看起来就像这样：
 
 ![分支策略](./cl.png)
+
+## 多人协作
+
+1. 首先，可以试图用git push origin branch-name推送自己的修改；
+
+2. 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+3. 如果合并有冲突，则解决冲突，并在本地提交；
+
+4. 没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
